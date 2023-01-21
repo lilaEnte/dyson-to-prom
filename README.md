@@ -2,7 +2,7 @@
 
 This tool collects sensor data from Dyson fans and exposes these metrics to get scraped by a Prometheus server.
 
-This is a work in progress and inspired by [https://github.com/williampiv/dyson-graph](Dyson Graph) using [https://github.com/shenxn/libdyson](Dyson Python Library) and [https://github.com/prometheus/client_python](Prometheus Python Client).
+This is a work in progress and inspired by [Dyson Graph](https://github.com/williampiv/dyson-graph) using [Dyson Python Library](https://github.com/shenxn/libdyson) and [Prometheus Python Client](https://github.com/prometheus/client_python).
 
 ## Requirements
 
@@ -82,7 +82,7 @@ sudo systemctl start dyson-metrics.service
 ```
 
 Server should now be running on [http://localhost:8000/](http://localhost:8000/)
-If you want to change the port have a look at the `-port` parameter under [https://github.com/lilaEnte/dyson-to-prom#usage](Usage)
+If you want to change the port have a look at the `-port` parameter under [Usage](https://github.com/lilaEnte/dyson-to-prom#usage)
 
 ## Setup Prometheus to scrape data
 
