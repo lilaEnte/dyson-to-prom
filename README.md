@@ -15,7 +15,7 @@ You will need the following information of your device(s):
 Get source code and create virtual environment
 ```
 git clone https://github.com/lilaEnte/dyson-to-prom.git
-cd libdyson/
+cd dyson-to-prom/
 python3 -m venv .venv
 ```
 
@@ -53,12 +53,7 @@ optional arguments:
 
 ## Setup as a service through systemctl/systemd
 
-Create service config file
-```
-sudo nano /etc/systemd/system/dyson-metrics.service
-```
-
-Fill with following content (adjust paths to your needs)
+Create service config file in `/etc/systemd/system/` called `dyson-metrics.service` and fill with the following content (adjust paths to your needs)
 ```ini
 [Unit]
 Description=Serve dyson metrics as http service
@@ -86,12 +81,7 @@ If you want to change the port have a look at the `-port` parameter under [Usage
 
 ## Setup Prometheus to scrape data
 
-Edit prometheus config file
-```
-sudo nano /etc/prometheus/prometheus.yml
-```
-
-Add the following job to `scrape_configs:` section
+Edit prometheus config file `prometheus.yml` and add the following job to `scrape_configs:` section
 ```
   - job_name: 'dyson'
 
